@@ -1,0 +1,43 @@
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/navbar.ejs') %>
+<div class="container mt-5">
+    <h1 class="text-center">Welcome to Atyrau Marketplace</h1>
+    <p class="text-center">Buy and sell items easily in Atyrau!</p>
+
+    <!-- Listings -->
+    <div class="row">
+      <div class="col-md-4" id="listing-template">
+        <div class="card">
+          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Listing Image" />
+          <div class="card-body">
+            <h5 class="card-title">Sample Listing</h5>
+            <p class="card-text">Description of the item goes here.</p>
+            <p class="card-text"><strong>Price:</strong> 10,000 KZT</p>
+            <a href="#" class="btn btn-primary">Contact Seller</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add New Listing -->
+    <div class="mt-5">
+      <h2>Add a New Listing</h2>
+      <form>
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" class="form-control" id="title" placeholder="Enter title" />
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea class="form-control" id="description" rows="3" placeholder="Enter description"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="price" class="form-label">Price (KZT)</label>
+          <input type="number" class="form-control" id="price" placeholder="Enter price" />
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <%- include('./partials/footer.ejs') %>
